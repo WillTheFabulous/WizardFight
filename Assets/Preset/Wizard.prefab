@@ -130,8 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5119333015548220022}
-  currentCamera: {fileID: 0}
-  speed: 12
+  speed: 3
   gravity: -10
   jumpHeight: 2
   fireRate: 0.5
@@ -142,6 +141,11 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  nextFire: 0
+  Position:
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  LocalEulerAngles:
+    m_InternalValue: {x: 0, y: 0, z: 0}
 --- !u!143 &5119333015548220022
 CharacterController:
   m_ObjectHideFlags: 0

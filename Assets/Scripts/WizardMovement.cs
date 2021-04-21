@@ -11,8 +11,6 @@ public class WizardMovement : NetworkBehaviour
 {
     public CharacterController controller;
 
-
-
     public float speed = 12f;
     public float gravity = -10f;
     public float jumpHeight = 2f;
@@ -30,6 +28,7 @@ public class WizardMovement : NetworkBehaviour
     private bool upgraded;
     private Vector3 hitbackDir;
 
+    public string hitPlayer;
     Vector3 velocity;
     bool isGrounded;
 
@@ -49,6 +48,7 @@ public class WizardMovement : NetworkBehaviour
     void Start()
     {
         Cursor.visible = true;
+        hitPlayer = this.name;
     }
 
     public override void NetworkStart()
@@ -75,6 +75,7 @@ public class WizardMovement : NetworkBehaviour
     public void SubmitShootBulletRequestServerRpc()
     {
         GameObject bulletObject = Instantiate(bullet, bulletSpawn.position + bulletSpawn.forward * 1.2f * transform.localScale.z, bulletSpawn.rotation);
+        bulletObject.GetComponent<BulletControl>().shooter = this.name;
         bulletObject.transform.localScale = new Vector3(1f, 3f, 3f);
     }
 
@@ -127,6 +128,7 @@ public class WizardMovement : NetworkBehaviour
             {
                 isHitBack = false;
                 hitBackCount = 25;
+                hitPlayer = this.name;
             }
 
 

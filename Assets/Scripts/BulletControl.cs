@@ -6,6 +6,7 @@ public class BulletControl : MonoBehaviour
 {
     public float speed;
     private Transform bullet;
+    public string shooter;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class BulletControl : MonoBehaviour
         if (other.tag == "Wizard")
         {
             // Hit an enemy
+            other.gameObject.GetComponent<WizardMovement>().hitPlayer = shooter;
             other.gameObject.GetComponent<WizardMovement>().hitBack(bullet.forward);
             Destroy(gameObject);
         }
