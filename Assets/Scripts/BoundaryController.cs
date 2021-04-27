@@ -24,10 +24,21 @@ public class BoundaryController : MonoBehaviour
             // Hit an enemy
             //other.gameObject.GetComponent<WizardMovement>().hitBack(bullet.forward);
             GameObject messageUI = GameObject.Find("MessageUI");
-            messageUI.transform.Find("KillMessage").gameObject.GetComponent<Text>().text = 
-                other.GetComponent<WizardMovement>().hitPlayer + " killed " + other.name;
-            Debug.Log(other.GetComponent<WizardMovement>().hitPlayer + " killed " + other.name);
-            other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(new Vector3(973, -40, -400));
+            /*messageUI.transform.Find("KillMessage").gameObject.GetComponent<Text>().text = 
+                other.GetComponent<WizardMovement>().hitPlayer + " killed " + other.name;*/
+            //Debug.Log(other.GetComponent<WizardMovement>().hitPlayer + " killed " + other.name);
+            Vector3 spawnPos = new Vector3(973, -40, -400);
+            Vector3 dir = spawnPos - this.gameObject.GetComponent<Transform>().position;
+            float dotDir = Vector3.Dot(dir, this.gameObject.GetComponent<Transform>().forward);
+            if (dotDir > 0.0f)
+            {
+                other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(other.gameObject.GetComponent<Transform>().position + 150.0f * this.gameObject.GetComponent<Transform>().forward);
+            }
+            else 
+            {
+                other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(other.gameObject.GetComponent<Transform>().position - 150.0f * this.gameObject.GetComponent<Transform>().forward);
+            }
+           
             //Destroy(gameObject);
         }
         else if (other.tag == "Base")

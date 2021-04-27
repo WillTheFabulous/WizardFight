@@ -226,6 +226,7 @@
     <Compile Include="Assets\ThirdParty\IGSoft_Tools\FXMaker\ToolScript\ToolScript\FxmFolderPopup.cs" />
     <Compile Include="Assets\ThirdParty\IGSoft_Tools\FXMaker\ToolResource\UnityShader\FXMakerGrayscaleEffect.cs" />
     <Compile Include="Assets\Scripts\BoundaryController.cs" />
+    <Compile Include="Assets\TeleportController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\_Art\ArtTest\Cloud\Cloud.shader" />
