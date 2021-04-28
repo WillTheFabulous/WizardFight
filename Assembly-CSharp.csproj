@@ -122,6 +122,7 @@
     <Compile Include="Assets\ThirdParty\IGSoft_Tools\FXMaker\ToolScript\ToolScript\FXMakerMouse.cs" />
     <Compile Include="Assets\InanEvin\Rich FX - HDRP Post Processing\VolumeScripts\LetterBox.cs" />
     <Compile Include="Assets\ThirdParty\IGSoft_Resources\Scripts\NcEffect\Common\NcRandomTimerTool.cs" />
+    <Compile Include="Assets\TeleportController.cs" />
     <Compile Include="Assets\ThirdParty\IGSoft_Resources\Scripts\NcEffect\NcAddForce.cs" />
     <Compile Include="Assets\InanEvin\Rich FX - HDRP Post Processing\VolumeScripts\BloomStreak.cs" />
     <Compile Include="Assets\ThirdParty\IGSoft_Resources\Scripts\NcEffect\Common\NcDontActive.cs" />
@@ -226,7 +227,8 @@
     <Compile Include="Assets\ThirdParty\IGSoft_Tools\FXMaker\ToolScript\ToolScript\FxmFolderPopup.cs" />
     <Compile Include="Assets\ThirdParty\IGSoft_Tools\FXMaker\ToolResource\UnityShader\FXMakerGrayscaleEffect.cs" />
     <Compile Include="Assets\Scripts\BoundaryController.cs" />
-    <Compile Include="Assets\TeleportController.cs" />
+    <Compile Include="Assets\FloorController.cs" />
+    <Compile Include="Assets\Scripts\SingleFloorController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\_Art\ArtTest\Cloud\Cloud.shader" />
