@@ -10,6 +10,7 @@ public class SingleFloorController : MonoBehaviour
     private int preCount = 50;
     private int cnt = 0;
     private Renderer rend;
+    public int numLoop;
     // Start is called before the first frame update
     void Start()
     {
