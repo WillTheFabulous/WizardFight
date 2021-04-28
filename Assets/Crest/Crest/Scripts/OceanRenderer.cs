@@ -466,7 +466,7 @@ namespace Crest
 
             if (_attachDebugGUI && GetComponent<OceanDebugGUI>() == null)
             {
-                gameObject.AddComponent<OceanDebugGUI>().hideFlags = HideFlags.DontSave;
+                //gameObject.AddComponent<OceanDebugGUI>().hideFlags = HideFlags.DontSave;
             }
 
 #if UNITY_EDITOR
