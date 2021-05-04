@@ -51,6 +51,7 @@ public class FloorController : MonoBehaviour
         totalFloors = this.GetComponent<Transform>().childCount;
         timeCount++;
 
+        
         if (timeCount >= timePeriod)
         {
             timeCount = 0;

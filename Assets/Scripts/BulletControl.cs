@@ -1,8 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class BulletControl : MonoBehaviour
+using Photon.Pun;
+
+using System.Collections;
+
+public class BulletControl : MonoBehaviourPunCallbacks
 {
     public float speed;
     private Transform bullet;
@@ -21,17 +24,30 @@ public class BulletControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
+
         if (other.tag == "Wizard")
         {
             // Hit an enemy
-            other.gameObject.GetComponent<WizardMovement>().hitPlayer = shooter;
-            other.gameObject.GetComponent<WizardMovement>().hitBack(bullet.forward);
-            Destroy(gameObject);
+            //other.gameObject.GetComponent<WizardMovement>().hitPlayer = shooter;
+            //other.gameObject.GetComponent<WizardMovement>().hitBack(bullet.forward);
+
+            other.gameObject.GetComponent<WizardMovement>().photonView.RPC("hitBack", RpcTarget.All, bullet.forward);
+            PhotonNetwork.Destroy(gameObject);
         }
         else if (other.tag == "Base")
         {
             // Hit the base
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
+    }
+
+    [PunRPC]
+    public void setPosition(Vector3 pos)
+    {
+        transform.position = pos;
     }
 }

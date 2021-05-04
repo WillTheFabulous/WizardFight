@@ -1,8 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class TeleportController : MonoBehaviour
+using Photon.Pun;
+
+using System.Collections;
+
+public class TeleportController : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
     public GameObject exit;
@@ -21,13 +24,17 @@ public class TeleportController : MonoBehaviour
     {
         if (other.tag == "Wizard" || other.tag == "Bullet")
         {
-            other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(exit.GetComponent<Transform>().position + 7.0f * exit.GetComponent<Transform>().forward);
-            //Destroy(gameObject);
+            ///other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(exit.GetComponent<Transform>().position + 7.0f * exit.GetComponent<Transform>().forward);
+            Vector3 newPosition = exit.GetComponent<Transform>().position + 7.0f * exit.GetComponent<Transform>().forward;
+            if (other.tag == "Wizard") other.gameObject.GetComponent<WizardMovement>().photonView.RPC("setPosition", RpcTarget.All, newPosition);
+            if (other.tag == "Bullet") other.gameObject.GetComponent<BulletControl>().photonView.RPC("setPosition", RpcTarget.All, newPosition);
+
+            //PhotonNetwork.Destroy(gameObject);
         }
         else if (other.tag == "Base")
         {
             // Hit the base
-            Destroy(gameObject);
+            ///Destroy(gameObject);
         }
     }
 }

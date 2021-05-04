@@ -1,9 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class BoundaryController : MonoBehaviour
+using Photon.Pun;
+
+using System.Collections;
+
+public class BoundaryController : MonoBehaviourPunCallbacks
 {
     // Start is called before the first frame update
     void Start()
@@ -30,15 +32,20 @@ public class BoundaryController : MonoBehaviour
             Vector3 spawnPos = new Vector3(973, -40, -400);
             Vector3 dir = spawnPos - this.gameObject.GetComponent<Transform>().position;
             float dotDir = Vector3.Dot(dir, this.gameObject.GetComponent<Transform>().forward);
+            Vector3 newPosition = new Vector3(0, 0, 0);
             if (dotDir > 0.0f)
             {
-                other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(other.gameObject.GetComponent<Transform>().position + 150.0f * this.gameObject.GetComponent<Transform>().forward);
+                //other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(
+                newPosition = other.gameObject.GetComponent<Transform>().position + 70.0f * this.gameObject.GetComponent<Transform>().forward;
+                //other.gameObject.transform.position = newPosition;
+                other.gameObject.GetComponent<WizardMovement>().photonView.RPC("setPosition", RpcTarget.All, newPosition);
             }
-            else 
+            else
             {
-                other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(other.gameObject.GetComponent<Transform>().position - 150.0f * this.gameObject.GetComponent<Transform>().forward);
+                //other.gameObject.GetComponent<WizardMovement>().SubmitPositionRequestServerRpc(
+                newPosition = other.gameObject.GetComponent<Transform>().position - 70.0f * this.gameObject.GetComponent<Transform>().forward;
+                other.gameObject.GetComponent<WizardMovement>().photonView.RPC("setPosition", RpcTarget.All, newPosition); 
             }
-           
             //Destroy(gameObject);
         }
         else if (other.tag == "Base")
