@@ -251,7 +251,7 @@ MonoBehaviour:
   gravity: -10
   jumpHeight: 2
   fireRate: 0
-  bullet: {fileID: 8000791841680423358, guid: 647be649abc1f86418f74f3877b9ceab, type: 3}
+  bullet: {fileID: 5984560472865861762, guid: 0c26083d6a7bc584eb4e32a55a26413a, type: 3}
   bulletSpawn: {fileID: 1627855990540730079}
   lifeCount: 3
   groundCheck: {fileID: 0}
