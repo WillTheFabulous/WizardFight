@@ -5,7 +5,7 @@ using Photon.Pun;
 
 using System.Collections;
 
-public class WizardMovement : MonoBehaviourPunCallbacks
+public class WizardMovement : MonoBehaviourPunCallbacks, IPunObservable
 {
     public CharacterController controller;
 
@@ -15,6 +15,7 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     public float fireRate;
     public GameObject bullet;
     public Transform bulletSpawn;
+    public int lifeCount = 3;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -34,6 +35,12 @@ public class WizardMovement : MonoBehaviourPunCallbacks
 
     bool isDead = false;
 
+    [SerializeField]
+    public GameObject PlayerTextPrefab;
+
+    [SerializeField]
+    public GameObject _uiGo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +48,16 @@ public class WizardMovement : MonoBehaviourPunCallbacks
         Cursor.visible = true;
         hitPlayer = this.name;
         currentHeight = this.transform.position.y;
+
+        if (PlayerTextPrefab != null)
+        {
+            _uiGo = Instantiate(PlayerTextPrefab);
+            _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
+        }
+        else
+        {
+            Debug.LogWarning("<Color=Red><a>Missing</a></Color> PlayerTextPrefab reference on player Prefab.", this);
+        }
     }
 
     public void GetNewPosition(float deltaTime, out Vector3 newPosition, out Vector3 newEulerAngles)
@@ -119,10 +136,10 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void FixedUpdate()
     {
-        //if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
-        //{
-            //return;
-        //}
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
 
         Vector3 newPosition = new Vector3(0, 0, 0);
         Vector3 newEulerAngles = new Vector3(0, 0, 0);
@@ -168,4 +185,31 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     {
         transform.position = pos;
     }
+
+    [PunRPC]
+    public void updateUI(int lifeCount) 
+    {
+        _uiGo.GetComponent<PlayerUI>().UpdateText(lifeCount);
+    }
+
+    #region IPunObservable implementation
+
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            // We own this player: send the others our data
+            stream.SendNext(lifeCount);
+        }
+        else
+        {
+            // Network player, receive data
+            this.lifeCount = (int)stream.ReceiveNext();
+        }
+    }
+
+
+    #endregion
+
 }
