@@ -25,6 +25,8 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     public float nextFire;
     private bool upgraded;
     private Vector3 hitbackDir;
+    private WarriorAnimsFREE.WarriorController warriorController;
+    private float currentHeight;
 
     public string hitPlayer;
     Vector3 velocity;
@@ -35,8 +37,10 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        warriorController = GetComponent<WarriorAnimsFREE.WarriorController>();
         Cursor.visible = true;
         hitPlayer = this.name;
+        currentHeight = this.transform.position.y;
     }
 
     public void GetNewPosition(float deltaTime, out Vector3 newPosition, out Vector3 newEulerAngles)
@@ -78,6 +82,20 @@ public class WizardMovement : MonoBehaviourPunCallbacks
 
             //controller.Move(move * speed * Time.deltaTime);
             newPosition += move * speed * deltaTime;
+
+            if (move.magnitude == 0)
+            {
+                warriorController.isMoving = false;
+                warriorController.SetAnimatorBool("Moving", false);
+                warriorController.SetAnimatorFloat("Velocity", 0);
+            }
+            else 
+            {
+                warriorController.isMoving = true;
+                warriorController.SetAnimatorBool("Moving", true);
+                warriorController.SetAnimatorFloat("Velocity", (speed * move).magnitude);
+            }
+            
             ///controller.Move(velocity * Time.deltaTime);
         }
         else
@@ -101,10 +119,10 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
-        {
-            return;
-        }
+        //if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        //{
+            //return;
+        //}
 
         Vector3 newPosition = new Vector3(0, 0, 0);
         Vector3 newEulerAngles = new Vector3(0, 0, 0);
