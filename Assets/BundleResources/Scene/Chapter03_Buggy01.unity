@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 437152772}
-  m_IndirectSpecularColor: {r: 1495.2656, g: 789.8965, b: 425.5869, a: 1}
+  m_IndirectSpecularColor: {r: 1655.2051, g: 931.56055, b: 603.2212, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15185,7 +15185,7 @@ MonoBehaviour:
   gravity: -10
   jumpHeight: 2
   fireRate: 0
-  bullet: {fileID: 8000791841680423358, guid: 647be649abc1f86418f74f3877b9ceab, type: 3}
+  bullet: {fileID: 5984560472865861762, guid: 0c26083d6a7bc584eb4e32a55a26413a, type: 3}
   bulletSpawn: {fileID: 675612228}
   groundCheck: {fileID: 0}
   groundDistance: 0.4
