@@ -26,7 +26,9 @@ namespace WarriorAnimsFREE
 			inputJump = Input.GetButtonDown("Jump");
 			inputHorizontal = Input.GetAxisRaw("Horizontal");
 			inputVertical = Input.GetAxisRaw("Vertical");
-		}
+            inputHorizontal = 0;
+            inputVertical = 0;
+        }
 
 		private void Toggles()
 		{

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/BundleResources/Scene/Chapter03_Buggy01.unity
+- path: Assets/BundleResources/Scene/Begin.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
