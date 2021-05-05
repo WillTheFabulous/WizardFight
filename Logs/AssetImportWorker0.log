@@ -15,11 +15,11 @@ C:/WizardFight
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61536
+61760
 Successfully changed project path to: C:/WizardFight
 C:/WizardFight
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 95.70 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 90.40 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
@@ -35,111 +35,163 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56096
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002045 seconds.
+Registered in 0.001796 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 107.41 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 89.10 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.120 seconds
+- Completed reload, in  0.872 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006071 seconds.
+Registered in 0.005435 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 99.76 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 96.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.330 seconds
+- Completed reload, in  1.213 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.91 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 2.15 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 235.9 MB.
-System memory in use after: 236.1 MB.
+System memory in use before: 236.7 MB.
+System memory in use after: 236.9 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 5275.
-Total: 5.628200 ms (FindLiveObjects: 1.254800 ms CreateObjectMapping: 0.720000 ms MarkObjects: 3.534900 ms  DeleteObjects: 0.116400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Preset/Resources/Player Name Text.prefab
-  artifactKey: Guid(dff9ee93d207ccb4797af37e01e7dfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Preset/Resources/Player Name Text.prefab using Guid(dff9ee93d207ccb4797af37e01e7dfa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78f07399e306358e81a46aca57f22d07') in 0.084608 seconds
-  Import took 0.099462 seconds .
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 5278.
+Total: 6.624400 ms (FindLiveObjects: 1.323300 ms CreateObjectMapping: 0.608900 ms MarkObjects: 4.601600 ms  DeleteObjects: 0.087500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000310 seconds.
-  path: Assets/VFXDefaultResources.asset
-  artifactKey: Guid(145290c901d58b343bdeb3b4362c9ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/VFXDefaultResources.asset using Guid(145290c901d58b343bdeb3b4362c9ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1b4011eebea0e1ea18b97773a53e417') in 0.122563 seconds
-  Import took 0.136321 seconds .
+  path: Assets/Crest/Crest-Examples/BoatDev/Settings/SettingsFoamWakes.asset
+  artifactKey: Guid(8e1de4c30452ccf499882fefe206c5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Settings/SettingsFoamWakes.asset using Guid(8e1de4c30452ccf499882fefe206c5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba13ac8b84c7f9f83452ecd0515ba03b') in 0.054185 seconds
+  Import took 0.068106 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000334 seconds.
-  path: Assets/Preset/Resources/FireBall.prefab
-  artifactKey: Guid(647be649abc1f86418f74f3877b9ceab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Preset/Resources/FireBall.prefab using Guid(647be649abc1f86418f74f3877b9ceab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+  Time since last request: 0.000254 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Settings/SettingsWavesWakes.asset
+  artifactKey: Guid(2191178a667ebae4594740b717a322f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Settings/SettingsWavesWakes.asset using Guid(2191178a667ebae4594740b717a322f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7596a85b605d81778b6dac8da731be94') in 0.004786 seconds
+  Import took 0.018034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Settings/SettingsFoamWakes.asset
+  artifactKey: Guid(8e1de4c30452ccf499882fefe206c5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Settings/SettingsFoamWakes.asset using Guid(8e1de4c30452ccf499882fefe206c5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba13ac8b84c7f9f83452ecd0515ba03b') in 0.003959 seconds
+  Import took 0.016343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.104382 seconds.
+  path: Assets/Materials/BulletMaterial.mat
+  artifactKey: Guid(7dc48d78a61ad2840929800b7ea5c753) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/BulletMaterial.mat using Guid(7dc48d78a61ad2840929800b7ea5c753) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
- -> (artifact id: 'c9450ad529c350e9f51a493b19441aa8') in 3.107888 seconds
-  Import took 3.121187 seconds .
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+ -> (artifact id: '40b19f9340d9a3800a9ba380b4c7c6ea') in 2.561588 seconds
+  Import took 2.569654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.576535 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Data/AddBumpsToWater.prefab
+  artifactKey: Guid(0dde4b778082b1241ba64e4ad3e46fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Data/AddBumpsToWater.prefab using Guid(0dde4b778082b1241ba64e4ad3e46fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '362c4f611a89565e67e1176a6b436d1b') in 0.047428 seconds
+  Import took 0.054810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Data/OceanLiner.prefab
+  artifactKey: Guid(fab3f04ce74996c4c806ab300d4abf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Data/OceanLiner.prefab using Guid(fab3f04ce74996c4c806ab300d4abf45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ddbc12a3a01eb0f79554da8060e83d') in 0.038900 seconds
+  Import took 0.046288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Data/BoatAlignNormal.prefab
+  artifactKey: Guid(71ede3c2ab0b7cb43b7dad6ae3b6190b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Data/BoatAlignNormal.prefab using Guid(71ede3c2ab0b7cb43b7dad6ae3b6190b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b4fd770f722b9138facafe03cf0f56') in 0.032928 seconds
+  Import took 0.040849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Data/BoatProbes.prefab
+  artifactKey: Guid(a9de35a642561b7479e8ab40bb529e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Data/BoatProbes.prefab using Guid(a9de35a642561b7479e8ab40bb529e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce7d3064297c117951847258adc7526a') in 0.029432 seconds
+  Import took 0.036360 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000130 seconds.
-  path: Assets/Preset/Resources/FallingFloor.prefab
-  artifactKey: Guid(ead01015a0f68cf4da6c089569e1c013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Preset/Resources/FallingFloor.prefab using Guid(ead01015a0f68cf4da6c089569e1c013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a3b4e08db1685b0c2301783e6e4418') in 0.047945 seconds
-  Import took 0.055347 seconds .
+  path: Assets/Crest/Crest-Examples/BoatDev/Data/BoatAlignNormal.prefab
+  artifactKey: Guid(71ede3c2ab0b7cb43b7dad6ae3b6190b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Data/BoatAlignNormal.prefab using Guid(71ede3c2ab0b7cb43b7dad6ae3b6190b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b4fd770f722b9138facafe03cf0f56') in 0.029679 seconds
+  Import took 0.036411 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000134 seconds.
-  path: Assets/Tree1.prefab
-  artifactKey: Guid(47ecf8c377e8882459d5b9615a0e985a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree1.prefab using Guid(47ecf8c377e8882459d5b9615a0e985a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8ddc6a3e0686e08ab88db448a954cd7') in 0.047389 seconds
-  Import took 0.057344 seconds .
+  Time since last request: 0.000136 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Data/Bouncy.physicMaterial
+  artifactKey: Guid(6ec8eb77db2f6f941951933461a0c426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Data/Bouncy.physicMaterial using Guid(6ec8eb77db2f6f941951933461a0c426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ef07852102a930ffca74e2465fe7d51') in 0.003155 seconds
+  Import took 0.009588 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/Tree2.prefab
-  artifactKey: Guid(b6bcc4622b93cfb4da67ba390ac0b5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tree2.prefab using Guid(b6bcc4622b93cfb4da67ba390ac0b5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '582655db7ba3d5862d502e5bfc420639') in 0.030341 seconds
-  Import took 0.037706 seconds .
+  Time since last request: 0.001433 seconds.
+  path: Assets/Crest/Crest-Examples/BoatDev/Data/Bouncy.physicMaterial
+  artifactKey: Guid(6ec8eb77db2f6f941951933461a0c426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crest/Crest-Examples/BoatDev/Data/Bouncy.physicMaterial using Guid(6ec8eb77db2f6f941951933461a0c426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ef07852102a930ffca74e2465fe7d51') in 0.002056 seconds
+  Import took 0.008014 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004513 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.141 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4443 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 225.7 MB.
+System memory in use after: 226.2 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 5534.
+Total: 8.206400 ms (FindLiveObjects: 1.199000 ms CreateObjectMapping: 0.938400 ms MarkObjects: 6.014300 ms  DeleteObjects: 0.053000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000144 seconds.
-  path: Assets/Preset/Resources/Mage Warrior.prefab
-  artifactKey: Guid(71ffd44f6c774a24bbb8f6dd974778c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Preset/Resources/Mage Warrior.prefab using Guid(71ffd44f6c774a24bbb8f6dd974778c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ee12cd3c7d4f7083ebe39cad6c65d1') in 0.112429 seconds
-  Import took 0.120382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
+  Time since last request: 16.156046 seconds.
   path: Assets/Preset/Resources/ElectricBall.prefab
   artifactKey: Guid(0c26083d6a7bc584eb4e32a55a26413a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Preset/Resources/ElectricBall.prefab using Guid(0c26083d6a7bc584eb4e32a55a26413a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) UnassignedReferenceException: The variable MeshToAttach of PointCacheBaker has not been assigned.
@@ -150,103 +202,15 @@ You probably need to assign the MeshToAttach variable of the PointCacheBaker scr
   at PointCacheBaker.Awake () [0x0000c] in C:\WizardFight\Assets\VFX Arsenal\Utilities\PointCacheBaker.cs:25 
   at PointCacheBaker.OnValidate () [0x00000] in C:\WizardFight\Assets\VFX Arsenal\Utilities\PointCacheBaker.cs:18 
 
- -> (artifact id: 'ac405a92a7e0fb90292ccd7c664dc227') in 0.040257 seconds
-  Import took 0.047620 seconds .
+ -> (artifact id: 'f370d56830e0bd65b1f3969fffa84346') in 0.136670 seconds
+  Import took 0.151534 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000133 seconds.
-  path: Assets/Preset/Resources/Wizard.prefab
-  artifactKey: Guid(0b1b92a2e3d80544eb96441b2d988bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Preset/Resources/Wizard.prefab using Guid(0b1b92a2e3d80544eb96441b2d988bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '990f78900090d3758f8e6887a2f852cd') in 0.029659 seconds
-  Import took 0.037145 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000131 seconds.
-  path: Assets/Sphere design.FBX
-  artifactKey: Guid(43a92fee0708c2645823fae61292c1d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sphere design.FBX using Guid(43a92fee0708c2645823fae61292c1d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbda4ec221e0ffadcfc8217f81820b07') in 0.067747 seconds
-  Import took 0.075253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/Readme.asset
-  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '742d2d8cbb9e44a8f0bdd574571293a6') in 0.003049 seconds
-  Import took 0.009522 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.478870 seconds.
-  path: Assets/HDRPDefaultResources/DefaultHDRISky.exr
-  artifactKey: Guid(54a3a0570aebe8949bec4966f1376581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRPDefaultResources/DefaultHDRISky.exr using Guid(54a3a0570aebe8949bec4966f1376581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bcc4deaa078668a1d60ab355a2670e0') in 0.026945 seconds
-  Import took 0.033911 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/HDRPDefaultResources/HDRPDefaultSettings.asset
-  artifactKey: Guid(582adbd84082fdb4faf7cd4beb1ccd14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRPDefaultResources/HDRPDefaultSettings.asset using Guid(582adbd84082fdb4faf7cd4beb1ccd14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1982bb6bd5050977ef15b614d1fc8a4a') in 0.003193 seconds
-  Import took 0.010765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000132 seconds.
-  path: Assets/HDRPDefaultResources/SkyFogSettingsProfile.asset
-  artifactKey: Guid(ea5c25297f0c0a04da0eabb1c26a7509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRPDefaultResources/SkyFogSettingsProfile.asset using Guid(ea5c25297f0c0a04da0eabb1c26a7509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371b11eaeed8515d713404eeffb77b2a') in 0.002478 seconds
-  Import took 0.008534 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000130 seconds.
-  path: Assets/HDRPDefaultResources/DefaultSceneRoot.prefab
-  artifactKey: Guid(2bfa7b9d63fa79e4abdc033f54a868d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/HDRPDefaultResources/DefaultSceneRoot.prefab using Guid(2bfa7b9d63fa79e4abdc033f54a868d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa8515a92bd41237e4d22b5b74bfa761') in 0.011305 seconds
-  Import took 0.017981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.002950 seconds.
-  path: Assets/InanEvin/Rich FX - HDRP Post Processing
-  artifactKey: Guid(6c6215a5365c0c24083cee60c7529039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/InanEvin/Rich FX - HDRP Post Processing using Guid(6c6215a5365c0c24083cee60c7529039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d98528397bb7de47f9cf5a78b4956ae') in 0.001732 seconds
-  Import took 0.008233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.660687 seconds.
-  path: Assets/InanEvin/Rich FX - HDRP Post Processing/Editor
-  artifactKey: Guid(ce7390ef9f51cff43b098e8c51ef061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/InanEvin/Rich FX - HDRP Post Processing/Editor using Guid(ce7390ef9f51cff43b098e8c51ef061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '752b047a983fc14bf47dec94ad31872d') in 0.004070 seconds
-  Import took 0.010962 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004162 seconds.
-  path: Assets/InanEvin/Rich FX - HDRP Post Processing/Editor
-  artifactKey: Guid(ce7390ef9f51cff43b098e8c51ef061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/InanEvin/Rich FX - HDRP Post Processing/Editor using Guid(ce7390ef9f51cff43b098e8c51ef061a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '752b047a983fc14bf47dec94ad31872d') in 0.001932 seconds
-  Import took 0.008924 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.302640 seconds.
-  path: Assets/Preset/Boundary.prefab
-  artifactKey: Guid(e23793ac6135f4a48b9f5b8ec1bcf050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Preset/Boundary.prefab using Guid(e23793ac6135f4a48b9f5b8ec1bcf050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e82549d85735499bed4639c3144be5e') in 0.029633 seconds
-  Import took 0.036951 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.016147 seconds.
-  path: Assets/Preset/Resources/Mage Warrior.prefab
-  artifactKey: Guid(71ffd44f6c774a24bbb8f6dd974778c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Preset/Resources/Mage Warrior.prefab using Guid(71ffd44f6c774a24bbb8f6dd974778c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) UnassignedReferenceException: The variable MeshToAttach of PointCacheBaker has not been assigned.
+  Time since last request: 6.627161 seconds.
+  path: Assets/Preset/Resources/ElectricBall.prefab
+  artifactKey: Guid(0c26083d6a7bc584eb4e32a55a26413a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Preset/Resources/ElectricBall.prefab using Guid(0c26083d6a7bc584eb4e32a55a26413a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) UnassignedReferenceException: The variable MeshToAttach of PointCacheBaker has not been assigned.
 You probably need to assign the MeshToAttach variable of the PointCacheBaker script in the inspector.
   at (wrapper managed-to-native) UnityEngine.GameObject.GetComponentInChildren(UnityEngine.GameObject,System.Type,bool)
   at UnityEngine.GameObject.GetComponentInChildren[T] (System.Boolean includeInactive) [0x00001] in <9baebf9af86541678fd15bfdbf5f26eb>:0 
@@ -254,7 +218,7 @@ You probably need to assign the MeshToAttach variable of the PointCacheBaker scr
   at PointCacheBaker.Awake () [0x0000c] in C:\WizardFight\Assets\VFX Arsenal\Utilities\PointCacheBaker.cs:25 
   at PointCacheBaker.OnValidate () [0x00000] in C:\WizardFight\Assets\VFX Arsenal\Utilities\PointCacheBaker.cs:18 
 
- -> (artifact id: 'c46d86b0d9d0761fdff6ce9fc017ca8b') in 0.054016 seconds
-  Import took 0.063523 seconds .
+ -> (artifact id: '9ecebf96cd8931f333e348992c5aad31') in 0.032361 seconds
+  Import took 0.038924 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
