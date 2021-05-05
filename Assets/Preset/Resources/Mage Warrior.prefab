@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 134591428019033349}
   m_Layer: 0
   m_Name: Mage Warrior
-  m_TagString: Player
+  m_TagString: Wizard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,6 +253,7 @@ MonoBehaviour:
   fireRate: 0
   bullet: {fileID: 8000791841680423358, guid: 647be649abc1f86418f74f3877b9ceab, type: 3}
   bulletSpawn: {fileID: 1627855990540730079}
+  lifeCount: 3
   groundCheck: {fileID: 0}
   groundDistance: 0.4
   groundMask:
@@ -261,6 +262,7 @@ MonoBehaviour:
   nextFire: 0
   hitPlayer: 
   PlayerTextPrefab: {fileID: 6418125332793589807, guid: dff9ee93d207ccb4797af37e01e7dfa5, type: 3}
+  _uiGo: {fileID: 0}
 --- !u!114 &9002246772970340527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +298,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 7631701896606914230}
   - {fileID: 9002246772970340527}
   sceneViewId: 41
   InstantiationId: 0

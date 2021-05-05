@@ -5,7 +5,7 @@ using Photon.Pun;
 
 using System.Collections;
 
-public class WizardMovement : MonoBehaviourPunCallbacks
+public class WizardMovement : MonoBehaviourPunCallbacks, IPunObservable
 {
     public CharacterController controller;
 
@@ -15,6 +15,7 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     public float fireRate;
     public GameObject bullet;
     public Transform bulletSpawn;
+    public int lifeCount = 3;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -37,6 +38,9 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     [SerializeField]
     public GameObject PlayerTextPrefab;
 
+    [SerializeField]
+    public GameObject _uiGo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +51,7 @@ public class WizardMovement : MonoBehaviourPunCallbacks
 
         if (PlayerTextPrefab != null)
         {
-            GameObject _uiGo = Instantiate(PlayerTextPrefab);
+            _uiGo = Instantiate(PlayerTextPrefab);
             _uiGo.SendMessage("SetTarget", this, SendMessageOptions.RequireReceiver);
         }
         else
@@ -181,4 +185,31 @@ public class WizardMovement : MonoBehaviourPunCallbacks
     {
         transform.position = pos;
     }
+
+    [PunRPC]
+    public void updateUI(int lifeCount) 
+    {
+        _uiGo.GetComponent<PlayerUI>().UpdateText(lifeCount);
+    }
+
+    #region IPunObservable implementation
+
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            // We own this player: send the others our data
+            stream.SendNext(lifeCount);
+        }
+        else
+        {
+            // Network player, receive data
+            this.lifeCount = (int)stream.ReceiveNext();
+        }
+    }
+
+
+    #endregion
+
 }

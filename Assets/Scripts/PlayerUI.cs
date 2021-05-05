@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using Photon.Pun;
 
 using System.Collections;
 
 
-public class PlayerUI : MonoBehaviour
+public class PlayerUI : MonoBehaviourPunCallbacks
 {
     private WizardMovement target;
 
@@ -29,7 +29,7 @@ public class PlayerUI : MonoBehaviour
         target = _target;
         if (gameObject.GetComponent<Text>().text != null)
         {
-            gameObject.GetComponent<Text>().text = target.photonView.Owner.NickName;
+            gameObject.GetComponent<Text>().text = target.photonView.Owner.NickName + " : " + target.lifeCount;
         }
 
         targetTransform = this.target.GetComponent<Transform>();
@@ -56,6 +56,12 @@ public class PlayerUI : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
+    }
+
+    [PunRPC]
+    public void UpdateText(int lifeCount) 
+    {
+        gameObject.GetComponent<Text>().text = target.photonView.Owner.NickName + " : " + lifeCount;
     }
 
     void LateUpdate()
